@@ -6,7 +6,7 @@ namespace EthplorerNET.Models.getTokenPriceHistoryGrouped
 {
     public class Input
     {
-        public string Address { get; protected set; }
-        public int Period { get; protected set; } = 365;
+        public string Address { get; set; }
+        public int Period { get; set; } = 365;
     }
 }

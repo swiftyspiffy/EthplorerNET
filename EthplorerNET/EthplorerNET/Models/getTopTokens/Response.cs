@@ -10,6 +10,6 @@ namespace EthplorerNET.Models.getTopTokens
     {
         /// <summary></summary>
         [JsonProperty(PropertyName = "tokens")]
-        public TokenInfo Tokens { get; protected set; }
+        public TokenInfo[] Tokens { get; protected set; }
     }
 }

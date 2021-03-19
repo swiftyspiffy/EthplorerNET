@@ -4,7 +4,9 @@ using System.Text;
 
 namespace EthplorerNET.Models.getTop
 {
-    class Input
+    public class Input
     {
+        public CriteriaEnum Criteria = CriteriaEnum.TRADE;
+        public int Limit = 50;
     }
 }

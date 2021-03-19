@@ -5,7 +5,7 @@ using System.Text;
 
 namespace EthplorerNET.Models.getTopTokenHolders
 {
-    public class TopTokenHolder
+    public class Holder
     {
         /// <summary></summary>
         [JsonProperty(PropertyName = "address")]

@@ -4,7 +4,9 @@ using System.Text;
 
 namespace EthplorerNET.Models.getTokenHistoryGrouped
 {
-    class Input
+    public class Input
     {
+        public string Address { get; set; } = null;
+        public int Period { get; set; } = 30;
     }
 }

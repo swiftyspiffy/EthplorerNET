@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -155,30 +156,29 @@ namespace EthplorerNET
 
         private async Task<T> GetGeneric<T>(string resource, List<KeyValuePair<string, string>> args = null, string accessKey = "")
         {
-            var url = $"{BASE_API}/{resource}";
+            var url = $"{BASE_API}{resource}";
             var key = ApiKey;
             if (!String.IsNullOrEmpty(accessKey))
                 key = accessKey;
             if (String.IsNullOrEmpty(key))
                 throw new Exception("Api key in instance and arg cannot be empty or null");
 
-            if(args != null && args.Count > 0)
-            {
-                args = new List<KeyValuePair<string, string>> { };
-            }
+            if(args == null)
+                args = new List<KeyValuePair<string, string>>();
             args.Add(new KeyValuePair<string, string>("apiKey", key));
             for (var i = 0; i < args.Count; i++)
             {
                 if (i == 0)
-                    url += $"?{args[0].Key}={args[1].Value}";
+                    url += $"?{args[i].Key}={args[i].Value}";
                 else
-                    url += $"&{args[0].Key}={args[1].Value}";
+                    url += $"&{args[i].Key}={args[i].Value}";
             }
 
             var deserializeSettings = new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
-                MissingMemberHandling = MissingMemberHandling.Ignore
+                MissingMemberHandling = MissingMemberHandling.Ignore,
+                Error = (se, ev) => { ev.ErrorContext.Handled = true; } // we'll definitely hit parsing errors since this API is inconsistent
             };
 
             using (var client = new HttpClient())

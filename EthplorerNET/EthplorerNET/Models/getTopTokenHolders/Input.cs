@@ -6,7 +6,7 @@ namespace EthplorerNET.Models.getTopTokenHolders
 {
     public class Input
     {
-        public string Address { get; protected set; } = null;
-        public int Limit { get; protected set; } = 10;
+        public string Address { get; set; } = null;
+        public int Limit { get; set; } = 10;
     }
 }

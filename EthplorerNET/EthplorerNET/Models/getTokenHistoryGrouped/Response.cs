@@ -1,4 +1,5 @@
-﻿using EthplorerNET.Models.Shared.Totals;
+﻿using EthplorerNET.Models.Shared.CountTxs;
+using EthplorerNET.Models.Shared.Totals;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

@@ -46,7 +46,7 @@ namespace EthplorerNET.Models.getTxInfo
         [JsonProperty(PropertyName = "creates")]
         public string Creates { get; protected set; }
         /// <summary>event logs</summary>
-        [JsonProperty(PropertyName = "creates")]
+        [JsonProperty(PropertyName = "logs")]
         public Log[] Logs { get; protected set; }
         /// <summary>event operations</summary>
         [JsonProperty(PropertyName = "operations")]
