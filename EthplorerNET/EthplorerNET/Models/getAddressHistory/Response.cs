@@ -6,7 +6,7 @@ using System.Text;
 
 namespace EthplorerNET.Models.getAddressHistory
 {
-    public class Responsea
+    public class Response
     {
         /// <summary>address history in operations</summary>
         [JsonProperty(PropertyName = "operations")]
