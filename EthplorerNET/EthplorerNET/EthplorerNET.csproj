@@ -2,10 +2,25 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>swiftyspiffy</Authors>
+    <Description>C# .NET Standard package implementing all of Ethplorer's API's and modelling all of the responses include: GetLastBlock, GetTokenInfo, GetAddressInfo, GetTxInfo, GetTokenHistory, GetAddressHistory, GetAddressTransactions, GetTop, GetTopTokens, GetTopTokenHolders, GetTokenHistoryGrouped, GetTokenPriceHistoryGrouped .</Description>
+    <Copyright>MIT</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageProjectUrl>https://github.com/swiftyspiffy/EthplorerNET</PackageProjectUrl>
+    <PackageIcon>apple-touch-icon-180x180.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Desktop\apple-touch-icon-180x180.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
