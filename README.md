@@ -1,7 +1,7 @@
 # EthplorerNET
 
 ## About
-EthplorerNET is a C# .NET Standard librar ythat has implemented all of the public facing [Ethplorer](https://ethplorer.io/) [API's](https://github.com/EverexIO/Ethplorer/wiki/Ethplorer-API). By default, the library will use the `freeapi` API key, which allows a decent amount of API access. You can register on Ethplorer and get your own API key, which will increase your rate limits. Keep in mind, this library is optimistic about what is returned from the API, meaning it wont throw exceptions on missing or invalid types. You should check for nulls on values you're accessing before using them :).
+EthplorerNET is a C# .NET Standard library that has implemented all of the public facing [Ethplorer](https://ethplorer.io/) [API's](https://github.com/EverexIO/Ethplorer/wiki/Ethplorer-API). By default, the library will use the `freeapi` API key, which allows a decent amount of API access. You can register on Ethplorer and get your own API key, which will increase your rate limits. Keep in mind, this library is optimistic about what is returned from the API, meaning it wont throw exceptions on missing or invalid types. You should check for nulls on values you're accessing before using them :).
 
 The list of API's are:
 - GetLastBlock()
